@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GPA Calculator</title>
+</head>
+<body>
+
+  <header>
+    <h1>GPA Calculator</h1>
+    <p>Calculate your Semester GPA, Cumulative GPA, and check how much you need next semester to cross that legendary GPA mark.</p>
+  </header>
+
+  <main>
+    <div class="selector">
+      <div>
+        <button>IT</button>
+        <button disabled>ECE</button>
+      </div>
+      <div>
+        <button>Semester 2</button>
+      </div>
+    </div>
+
+    <section>
+      <h2>Semester GPA</h2>
+      <form class="grades">
+        <label>
+          Data Structures
+          <input type="text" value="A" readonly>
+        </label>
+        <label>
+          Probability and Statistics
+          <input type="text" value="A-" readonly>
+        </label>
+        <label>
+          Discrete Mathematics
+          <input type="text" value="A" readonly>
+        </label>
+        <label>
+          Digital Electronics
+          <input type="text" value="A+" readonly>
+        </label>
+        <label>
+          Principles of Management
+          <input type="text" value="B+" readonly>
+        </label>
+      </form>
+    </section>
+
+    <div class="footer">
+      <p>You're on thin ice</p>
+      <div class="gpa-result">9.21 /10</div>
+    </div>
+  </main>
+
+</body>
+</html>
