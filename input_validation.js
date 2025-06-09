@@ -18,3 +18,34 @@ if(localAssignments){
         assignmentList.appendChild(newElement)
     })
 }
+function addAssignment() {
+
+    let assignmentName = document.getElementById("assignment-name")
+    let assignmentGrade = document.getElementById("assignment-grade")
+
+    if(assignmentGrade.value < 0 || assignmentGrade.value > 5) {
+        alert("The grade must be between 0 and 5")
+        return;
+    }
+    if(assignmentName.value === "") {
+        alert("Assignment name is needed")
+        return
+    }
+
+    assignments.push({
+        name: assignmentName.value,
+        grade: assignmentGrade.value
+    })
+
+    let newElement = document.createElement("li")
+    newElement.innerHTML = `
+        <span> ${assignmentName.value}: ${assignmentGrade.value} </span>
+    `
+    assignmentList.appendChild(newElement)
+
+    assignmentName.value = ""
+    assignmentGrade.value = ""
+
+    updateGPA()
+    localStorage.setItem('assignments', JSON.stringify(assignments))
+}
