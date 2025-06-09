@@ -117,6 +117,7 @@ input {
 
   main section {
     padding: 20px 15px;
+    width: 85%;
   }
 
   .selector,
