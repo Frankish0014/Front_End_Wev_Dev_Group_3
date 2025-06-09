@@ -21,22 +21,26 @@
         <button>BSE</button>
       </div>
     </div>
-      <form class="grades">
-        <label>
-          Name of the Course
-          <input type="text" id="assignment-name" required placeholder="Enter Course name">
-        </label>
-        <label>
-          Grade (out of 5)
-          <input type="number" id="assignment-grade" min="0" max="5" required>
-        </label>
-        <button type="button" id="submit">Add Assignment</button>
+      <form class="grades" id="form">
+        <div>
+          <label>
+            Name of the Course
+            <input type="text" id="assignment-name" required placeholder="Enter Course name">
+          </label>
+          <label>
+            Grade (out of 5)
+            <input type="number" id="assignment-grade" min="0" max="5" required>
+          </label>
+        </div>
       </form>
-      <h2>Assignment List</h2>
-      <ul id="assignment-list"></ul>
+      <button type="button" id="add-assignment" onclick="addAssignment()">Add Assignment</button>
+  <h2>Assignments List</h2>
+      <ul id="assignment-list">
+        
+      </ul>
       <div class="my-gpa" id="gpa-display">
         <p>Your Semester GPA is:</p>
-        <div class="gpa-result" id="gpa-display">0.00/5 </div>
+        <div class="gpa-result" id="gpa-result">GPA: 0.00/5 </div>
       </div>
     </section>
   </main>
