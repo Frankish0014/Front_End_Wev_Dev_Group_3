@@ -3,57 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css">
   <title>GPA Calculator</title>
 </head>
 <body>
-
-  <header>
-    <h1>GPA Calculator</h1>
-    <p>Calculate your Semester GPA, Cumulative GPA, and check how much you need next semester to cross that legendary GPA mark.</p>
-  </header>
-
   <main>
-    <div class="selector">
+    <header>
+      <h1>GPA Calculator</h1>
+      <p>Calculate your Semester GPA</p>
+    </header>
+
+    <div class="spacer">      
+    </div>
+    <section>
+      <div class="selector">
       <div>
-        <button>IT</button>
-        <button disabled>ECE</button>
-      </div>
-      <div>
-        <button>Semester 2</button>
+        <button>BSE</button>
       </div>
     </div>
-
-    <section>
-      <h2>Semester GPA</h2>
       <form class="grades">
         <label>
-          Data Structures
-          <input type="text" value="A" readonly>
+          Name of the Course
+          <input type="text" id="assignment-name" required placeholder="Enter Course name">
         </label>
         <label>
-          Probability and Statistics
-          <input type="text" value="A-" readonly>
+          Grade (out of 5)
+          <input type="number" id="assignment-grade" min="0" max="5" required>
         </label>
-        <label>
-          Discrete Mathematics
-          <input type="text" value="A" readonly>
-        </label>
-        <label>
-          Digital Electronics
-          <input type="text" value="A+" readonly>
-        </label>
-        <label>
-          Principles of Management
-          <input type="text" value="B+" readonly>
-        </label>
+        <button type="button" id="submit">Add Assignment</button>
       </form>
+      <h2>Assignment List</h2>
+      <ul id="assignment-list"></ul>
+      <div class="my-gpa" id="gpa-display">
+        <p>Your Semester GPA is:</p>
+        <div class="gpa-result" id="gpa-display">0.00/5 </div>
+      </div>
     </section>
-
-    <div class="footer">
-      <p>You're on thin ice</p>
-      <div class="gpa-result">9.21 /10</div>
-    </div>
   </main>
-
+  <script src="input_validation.js"></script>
 </body>
 </html>
