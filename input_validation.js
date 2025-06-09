@@ -49,3 +49,25 @@ function addAssignment() {
     updateGPA()
     localStorage.setItem('assignments', JSON.stringify(assignments))
 }
+
+
+let total = 0
+function updateGPA(){
+    let localTotal = 0
+    assignments.forEach((assignment) => {
+        localTotal += Number(assignment.grade)
+    })
+    console.log(assignments)
+    total = localTotal / assignments.length
+    document.getElementById("gpa-result").innerHTML = `GPA: ${total.toFixed(2)}/5`
+    return total.toFixed(2)
+}
+
+
+document.addEventListener('keydown', function(event){
+    if(event.key === "S" || event.key === "s"){
+        console.log("HERE ARE THE CURRENT ASSIGNMENTS")
+        console.log(assignments)
+        console.log(`Your GPA is: ${updateGPA()}`)
+    }
+})
